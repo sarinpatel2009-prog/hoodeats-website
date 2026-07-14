@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HoodEats</title>
+  <script>
+    // GitHub Pages SPA redirect trick.
+    // When a path like /privacy is requested, GitHub serves this 404.html.
+    // We grab the path, store it, and immediately redirect to the root index.html.
+    // index.html then reads the path from sessionStorage and shows the right page.
+    var path = window.location.pathname;
+    sessionStorage.setItem('spa_redirect', path);
+    window.location.replace('/');
+  </script>
+</head>
+<body></body>
+</html>
